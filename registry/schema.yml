@@ -1,0 +1,21 @@
+# DeepDown Registry Schema v1
+# Each entry defines ONE site source structure
+
+- name: <string>                     # Display name for the site
+  base_url: <string>                 # Base URL of the download site
+  category: <string>                 # software | music | movie | document | book | iso
+  region: <string>                   # region or country (global/en/ir/...) 
+  language: <string>                 # en | fa | multi
+  search:
+    path: <string>                  # Search URL structure (e.g. /search/{query})
+    method: <GET|POST>              # HTTP method for search
+    param: <string>                 # Query parameter name (e.g. ?q=)
+  extractor:
+    type: <regex|xpath|css>        # Extraction method
+    pattern: <string>               # Regex or XPath to match download links
+    base: <string>                 # (optional) base URL for relative links
+  health:
+    last_checked: <ISO8601>        # health check data
+    status: <up|down|redirected>
+  created_by: <github_user>       # contributor info
+  version: 1

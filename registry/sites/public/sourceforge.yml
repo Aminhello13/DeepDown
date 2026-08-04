@@ -1,0 +1,15 @@
+name: SourceForge
+base_url: https://sourceforge.net
+category: opensource-app
+region: global
+language: en
+search:
+  path: /directory/?q={query}
+  method: GET
+  param: q
+extractor:
+  type: xpath
+  selector: '//a[contains(@href, "/downloads/")]/@href'
+vpn_required: false
+created_by: horizon
+version: 1

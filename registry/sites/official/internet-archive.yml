@@ -1,0 +1,18 @@
+name: Internet Archive
+base_url: https://archive.org
+category: archiver
+region: global
+language: en
+search:
+  path: /search.php
+  method: GET
+  param: query
+extractor:
+  type: xpath
+  selector: '//a[contains(@href, "/download/")]/@href'
+vpn_required: false
+health:
+  last_checked: null
+  status: unknown
+created_by: horizon
+version: 1

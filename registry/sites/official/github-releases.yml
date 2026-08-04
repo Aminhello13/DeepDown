@@ -1,0 +1,16 @@
+name: GitHub Releases
+base_url: https://api.github.com
+category: opensource-app
+region: global
+language: en
+search:
+  path: /search/repositories?q={query}
+  method: GET
+  param: q
+extractor:
+  type: json_path
+  selector: 'items[*].releases_url'
+vpn_required: false
+requires_api_key: true
+created_by: horizon
+version: 1
