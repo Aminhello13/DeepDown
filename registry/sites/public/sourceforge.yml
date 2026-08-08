@@ -11,5 +11,5 @@ extractor:
   type: xpath
   selector: '//a[contains(@href, "/downloads/")]/@href'
 vpn_required: false
-created_by: horizon
+created_by: Aminhello13
 version: 1

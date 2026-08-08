@@ -12,5 +12,5 @@ extractor:
   selector: 'items[*].releases_url'
 vpn_required: false
 requires_api_key: true
-created_by: horizon
+created_by: Aminhello13
 version: 1
