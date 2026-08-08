@@ -1,6 +1,6 @@
-name: AvaMovie Movies
-base_url: https://avamovie3.info
-category: movies
+name: Yas Download Software
+base_url: https://yasdl.com
+category: software
 region: ir
 language: fa
 search:
@@ -8,7 +8,7 @@ search:
   method: GET
 extractor:
   type: regex
-  pattern: 'href="(https?://[^"]+\.(mkv|mp4|avi|zip))"'
+  pattern: 'href="(https?://dl\.yasdl\.com/[^"]+)"'
 is_free: true
 vpn_required: false
 created_by: Aminhello13

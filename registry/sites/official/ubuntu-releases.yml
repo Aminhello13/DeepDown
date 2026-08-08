@@ -1,15 +1,16 @@
 name: Ubuntu Releases
 base_url: https://releases.ubuntu.com
-category: linux-distro
+category: software
 region: global
 language: en
 search:
   path: /
   method: GET
-  param: ""
 extractor:
   type: regex
-  pattern: 'href="(ubuntu-[\d.]+-desktop-[^"]+\\.iso)"'
+  pattern: 'href="([^"]+\.iso)"'
+  base: https://releases.ubuntu.com/
+is_free: true
 vpn_required: false
 created_by: Aminhello13
-version: 1
+version: 2

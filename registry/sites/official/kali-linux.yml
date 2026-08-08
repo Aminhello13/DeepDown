@@ -1,19 +1,16 @@
 name: Kali Linux Official
 base_url: https://cdimage.kali.org
-category: linux-distro
+category: software
 region: global
 language: en
 search:
-  path: /kali-latest/
+  path: /kali-images/kali-last-snapshot/
   method: GET
-  param: ""
 extractor:
   type: regex
-  pattern: 'href="(kali-linux-[\d\.]+-installer-[^"]+\\.iso)"'
-  fallback: 'href="(kali-[^"]+\\.iso)"'
-health:
-  last_checked: null
-  status: unknown
+  pattern: 'href="(kali-linux-[^"]+\.iso)"'
+  base: https://cdimage.kali.org/kali-images/kali-last-snapshot/
+is_free: true
 vpn_required: false
 created_by: Aminhello13
 version: 1

@@ -1,5 +1,5 @@
-name: AvaMovie Movies
-base_url: https://avamovie3.info
+name: Takedl Movies
+base_url: https://takedl.com
 category: movies
 region: ir
 language: fa
@@ -8,7 +8,7 @@ search:
   method: GET
 extractor:
   type: regex
-  pattern: 'href="(https?://[^"]+\.(mkv|mp4|avi|zip))"'
+  pattern: 'href="(https?://dl\.takedl\.com/[^"]+\.(mkv|mp4|avi|zip))"'
 is_free: true
 vpn_required: false
 created_by: Aminhello13

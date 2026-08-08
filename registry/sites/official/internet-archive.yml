@@ -1,18 +1,19 @@
 name: Internet Archive
 base_url: https://archive.org
-category: archiver
+category: software
 region: global
-language: en
+language: multi
 search:
-  path: /search.php
+  path: /advancedsearch.php?q={query}&fl[]=identifier&fl[]=title&fl[]=downloads&rows=10&output=json
   method: GET
-  param: query
+  headers:
+    Accept: application/json
 extractor:
-  type: xpath
-  selector: '//a[contains(@href, "/download/")]/@href'
+  type: json
+  pattern: response.docs[*].identifier
+  name_field: response.docs[*].title
+  base: https://archive.org/details/
+is_free: true
 vpn_required: false
-health:
-  last_checked: null
-  status: unknown
 created_by: Aminhello13
-version: 1
+version: 2

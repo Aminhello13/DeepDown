@@ -1,16 +1,19 @@
 name: GitHub Releases
 base_url: https://api.github.com
-category: opensource-app
+category: software
 region: global
 language: en
 search:
   path: /search/repositories?q={query}
   method: GET
-  param: q
+  headers:
+    Accept: application/json
 extractor:
-  type: json_path
-  selector: 'items[*].releases_url'
+  type: json
+  pattern: items[*].html_url
+  name_field: items[*].full_name
+  desc_field: items[*].description
+is_free: true
 vpn_required: false
-requires_api_key: true
 created_by: Aminhello13
-version: 1
+version: 2
