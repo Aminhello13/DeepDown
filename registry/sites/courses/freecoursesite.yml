@@ -1,0 +1,15 @@
+name: FreeCourseSite
+base_url: https://freecoursesite.com
+category: courses
+region: global
+language: en
+search:
+  path: /?s={query}
+  method: GET
+extractor:
+  type: xpath
+  selector: '//a[contains(@href, "download")]/@href'
+health:
+  last_checked: null
+  status: unknown
+version: 1

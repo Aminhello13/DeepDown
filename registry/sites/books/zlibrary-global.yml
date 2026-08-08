@@ -1,0 +1,16 @@
+name: Z-Library
+base_url: https://singlelogin.re
+category: books
+region: global
+language: multi
+search:
+  path: /s/{query}
+  method: GET
+extractor:
+  type: regex
+  pattern: 'href="(/book/[^"]+)"'
+  base: https://singlelogin.re
+health:
+  last_checked: null
+  status: unknown
+version: 1

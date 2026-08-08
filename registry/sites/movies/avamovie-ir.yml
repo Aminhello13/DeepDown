@@ -1,0 +1,15 @@
+name: AvaMovie
+base_url: https://avamovie3.info
+category: movies
+region: ir
+language: fa
+search:
+  path: /?s={query}
+  method: GET
+extractor:
+  type: regex
+  pattern: 'href="(https?://[^"]+\.(mkv|mp4|avi))"'
+health:
+  last_checked: null
+  status: unknown
+version: 1
