@@ -152,9 +152,9 @@ DeepDown is the first public product from **DarXone Group**, a collective buildi
 
 | Phase | Date | Milestone |
 |-------|------|-----------|
-| v0.1 Alpha | Released | Core engine + 5-source registry |
+| v0.1 Alpha | Released | Core engine (Rust) + UI (React/Tailwind) + 5-source registry |
 | v0.5 Beta | Q4 2026 | 200+ source registry, Windows CLI |
-| v1.0 Desktop | Q1 2027 | Tauri GUI (Win/Linux/macOS) |
+| v1.0 Desktop | Q1 2027 | Native Clients for Windows (.exe), Linux (.deb/.AppImage), macOS (.dmg) |
 | v1.0 Mobile | Q2 2027 | Android release |
 | v2.0 | Q4 2027 | Smart discovery (crawl new sources), crowd-sourced ratings |
 

@@ -18,8 +18,17 @@ DeepDown is a **peer-to-search** download engine — no central server processes
    GitHub API    Source Sites    Local Filesystem
    (YAML files)  (Direct HTTP)   (Downloads)
 ```
+## Smart Ranking Algorithm (Non-Destructive)
+
+Unlike traditional aggregators that strictly filter out results based on geo-blocking, DeepDown uses a **Scoring and Ranking system**:
+1. **Local-First Priority (+100 pts):** Sources hosted in the user's detected region are bubbled to the top for maximum download speed and to bypass strict international throttling.
+2. **Global Availability (+50 pts):** Global, unmetered sources rank second.
+3. **Freemium Sorting (+30/-10 pts):** Completely free sources get a boost. Sub/Paid sources are penalized but **never hidden**.
+
+This ensures users in highly restricted network environments (like IR, CN) instantly see the most accessible links, while still having full access to global paid/premium alternatives.
 
 ## Core Modules
+### 1. Registry Loader (`registry.rs`)
 
 ### 1. Registry Loader (`registry.rs`)
 Loads YAML-defined source sites from:

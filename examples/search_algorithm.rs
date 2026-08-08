@@ -2,8 +2,9 @@
 // This demonstrates the core search algorithm without proprietary code.
 // Production version includes: caching, regional routing, smart filtering.
 
-use std::collections::HashMap;
-use std::time::Duration;
+// DeepDown Example: Parallel Site Search (simplified)
+// This demonstrates the core search algorithm without proprietary code.
+// Production version includes: caching, regional routing, smart filtering.
 
 /// Simplified registry entry for demo purposes
 #[derive(Debug, Clone)]

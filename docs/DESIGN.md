@@ -12,20 +12,25 @@
 
 ## Multi-Platform Support
 
+To capture the maximum market share, DeepDown is built with a write-once, deploy-anywhere architecture powered by **Tauri + Rust + React**.
+
 ### Windows
 - **Target:** `.exe` (standalone, no installer required)
+- **Distribution:** `msi` installer via WiX and direct `.exe` portable binary
 - **Compiler:** MSVC 2022
 - **Packaging:** Tauri bundler → MSI/NSIS
 - **Bench:** 1.7MB binary (Rust, LTO-optimized)
 
 ### Linux
 - **Target:** `.AppImage` / `.deb`
+- **Distribution:** `.AppImage` for universal Linux support, `.deb` for Debian/Ubuntu distributions, and `.rpm` for Fedora.
 - **Compiler:** GCC (via Rust GNU toolchain)
 - **Dependencies:** GTK3, WebKit2GTK (Tauri)
 - **Bench:** 2.1MB binary
 
 ### macOS
 - **Target:** `.dmg` / `.app`
+- **Distribution:** `.dmg` installer and `.app` bundle, natively compiled for both Intel (`x86_64`) and Apple Silicon (`aarch64` / M1, M2).
 - **Compiler:** Apple Clang (via Rust macOS toolchain)
 - **Notarization:** Apple Developer ID (planned)
 
